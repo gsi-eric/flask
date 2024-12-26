@@ -1,5 +1,5 @@
 FROM public.ecr.aws/docker/library/python:3.8-slim-buster
-
+#comments to main
 WORKDIR app
 
 COPY requirements.txt requirements.txt
