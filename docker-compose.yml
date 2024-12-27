@@ -1,0 +1,15 @@
+version: '3.13'
+services:
+  app:
+    image: 273354652660.dkr.ecr.us-east-1.amazonaws.com/flask
+    container_name: flask-app
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - flask-app:/usr/src/app
+volumes:
+  flask-app:
+    name: flask-app
