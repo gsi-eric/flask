@@ -1,8 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html/WordPress
+  - source: docker-compose.yml
+    destination: /opt/flask
+  - source: /scripts/
+    destination: /opt/flask/  
 hooks:
   ApplicationStart:
     - location: scripts/update-script.sh
